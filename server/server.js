@@ -43,6 +43,18 @@ app.get('/', (req, res) => {
   res.send('api server work!')
 })
 
+const allowedOrigins = ['https://funny-movies-7dsu.vercel.app'];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
+
 
 // set up CORS middleware
 app.use((req, res, next) => {
@@ -93,6 +105,7 @@ app.post(`${FUNNY_MOVIES_KEY}/login`, async (req, res) => {
 });
 
 app.post(`${FUNNY_MOVIES_KEY}/register`, async (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://funny-movies-server.vercel.app/*');
   try {
     const { username, email, password, isAdmin } = req.body;
 
@@ -129,6 +142,7 @@ app.post(`${FUNNY_MOVIES_KEY}/register`, async (req, res) => {
 });
 
 app.post(`${FUNNY_MOVIES_KEY}/video`, async (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://funny-movies-7dsu.vercel.app/*');
   const { url, video_id } = req.body;
 
   try {
@@ -190,7 +204,7 @@ app.listen(PORT, () => {
 });
 
 app.use(cors({
-  origin: 'https://funny-movies-7dsu.vercel.app/'
+  corsOptions
 }));
 
 module.exports = app
