@@ -39,8 +39,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-app.get('/funny-api/hello', (req, res) => {
-  res.send({ message: 'Hello from serverless function!' })
+app.get('/', (req, res) => {
+  res.send('api server work!')
 })
 
 
