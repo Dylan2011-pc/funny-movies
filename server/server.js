@@ -189,4 +189,8 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
+app.use(cors({
+  origin: 'https://funny-movies-7dsu.vercel.app/'
+}));
+
 module.exports = app
