@@ -7,7 +7,7 @@ const Videos = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.API_BASE_URL}/funny-api/videos`)
+      .get(`${process.env.REACT_APP_API_URL}/funny-api/videos`)
       .then((res) => {
         setVideo(res.data);
       })

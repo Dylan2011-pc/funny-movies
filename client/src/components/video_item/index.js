@@ -10,7 +10,7 @@ const VideoItem = (props) => {
   useEffect(() => {
     const fetchVideoData = async () => {
       await axios
-        .get(`${process.env.API_BASE_URL}/video/${props.videoData.video_id}`)
+        .get(`${process.env.REACT_APP_API_URL}/video/${props.videoData.video_id}`)
         .then((response) => {
           setVideoDetail(response.data);
         })
