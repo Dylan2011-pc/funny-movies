@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Dylan2011-pc/funny-movies/issues"
   },
-  "homepage": "https://github.com/Dylan2011-pc/funny-movies#readme"
+  "homepage": "https://github.com/Dylan2011-pc/funny-movies#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
