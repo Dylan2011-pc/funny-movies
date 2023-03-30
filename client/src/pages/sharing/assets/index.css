@@ -1,0 +1,5 @@
+.shadow-box-sharing{
+    border-top: 1px solid blue;
+    border-left: 1px solid rgba(66, 30, 230, 0.4);
+    box-shadow: rgba(52, 11, 233, 0.4) 5px 5px, rgba(64, 25, 203, 0.3) 10px 10px, rgba(66, 40, 180, 0.4) 15px 15px, rgba(96, 73, 200, 0.4) 20px 20px, rgba(113, 94, 200, 0.4) 25px 25px;
+}
