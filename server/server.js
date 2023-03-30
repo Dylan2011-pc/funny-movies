@@ -10,7 +10,6 @@ require('dotenv').config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
 
 const FUNNY_MOVIES_KEY = process.env.FUNNY_MOVIES_KEY;
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
