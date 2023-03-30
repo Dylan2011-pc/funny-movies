@@ -105,7 +105,6 @@ app.post(`${FUNNY_MOVIES_KEY}/login`, async (req, res) => {
 });
 
 app.post(`${FUNNY_MOVIES_KEY}/register`, async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://funny-movies-server.vercel.app/*');
   try {
     const { username, email, password, isAdmin } = req.body;
 
@@ -142,7 +141,6 @@ app.post(`${FUNNY_MOVIES_KEY}/register`, async (req, res) => {
 });
 
 app.post(`${FUNNY_MOVIES_KEY}/video`, async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://funny-movies-7dsu.vercel.app/*');
   const { url, video_id } = req.body;
 
   try {
