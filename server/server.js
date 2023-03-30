@@ -63,7 +63,7 @@ const generateAccessToken = (id) => {
 
 // Post method
 app.post(`${FUNNY_MOVIES_KEY}/login`, async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://funny-movies-7dsu.vercel.app');
+  res.setHeader('Access-Control-Allow-Origin', 'https://funny-movies-7dsu.vercel.app/login');
   try {
     const { email, password } = req.body;
 
@@ -99,7 +99,7 @@ app.post(`${FUNNY_MOVIES_KEY}/login`, async (req, res) => {
 });
 
 app.post(`${FUNNY_MOVIES_KEY}/register`, async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://funny-movies-7dsu.vercel.app');
+  res.setHeader('Access-Control-Allow-Origin', 'https://funny-movies-7dsu.vercel.app/register');
   try {
     const { username, email, password, isAdmin } = req.body;
 
@@ -137,7 +137,7 @@ app.post(`${FUNNY_MOVIES_KEY}/register`, async (req, res) => {
 
 app.post(`${FUNNY_MOVIES_KEY}/video`, async (req, res) => {
   const { url, video_id } = req.body;
-  res.setHeader('Access-Control-Allow-Origin', 'https://funny-movies-7dsu.vercel.app');
+  res.setHeader('Access-Control-Allow-Origin', 'https://funny-movies-7dsu.vercel.app/sharing');
   try {
       // Check if the video URL already exists in the database
       connection.query('SELECT * FROM video WHERE video_id = ?', [video_id], async (error, results) => {
