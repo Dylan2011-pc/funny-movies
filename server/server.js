@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
 
 
 // set up CORS middleware
-const allowedOrigins = ['https://funny-movies-7dsu.vercel.app/*'];
+const allowedOrigins = ['https://funny-movies-7dsu.vercel.app','https://funny-movies-7dsu.vercel.app/*'];
 
 
 app.use(cors({
