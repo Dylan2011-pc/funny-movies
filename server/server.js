@@ -15,14 +15,18 @@ app.use(cors());
 const FUNNY_MOVIES_KEY = process.env.FUNNY_MOVIES_KEY;
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
+const MYSQL_HOST = process.env.MYSQL_HOST;
+const MYSQL_DATABASE_NAME = process.env.MYSQL_DATABASE_NAME;
+const MYSQL_USER = process.env.MYSQL_USER;
+const MYSQL_PASSWORD = process.env.MYSQL_PASSWORD;
 
 const ACCESS_TOKEN_SECRET =  crypto.randomBytes(64).toString('hex');
 
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'funnymovies'
+  host: `${MYSQL_HOST}`,
+  user: `${MYSQL_USER}`,
+  password: `${MYSQL_PASSWORD}`,
+  database: `${MYSQL_DATABASE_NAME}`
 });
 
 connection.connect((err) => {
