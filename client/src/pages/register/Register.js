@@ -21,7 +21,7 @@ const RegisterPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const response = await axios.post('http://localhost:5000/funny-api/register', formData)
+        const response = await axios.post(`${process.env.API_BASE_URL}/funny-api/register`, formData)
         localStorage.setItem('token', response.data.token)
         setMessage(response.data.message)
         setItError(false);

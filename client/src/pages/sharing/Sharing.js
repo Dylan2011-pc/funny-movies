@@ -33,7 +33,7 @@ const SharingPage = observer(() => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const response = await axios.post('http://localhost:5000/funny-api/video', {
+        const response = await axios.post(`${process.env.API_BASE_URL}/funny-api/video`, {
           url: videoUrl,
           video_id: videoId
         });

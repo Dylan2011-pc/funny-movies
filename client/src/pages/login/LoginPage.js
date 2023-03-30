@@ -33,7 +33,7 @@ const LoginPage = () => {
     event.preventDefault();
 
     axios
-      .post("http://localhost:5000/funny-api/login", {
+      .post(`${process.env.API_BASE_URL}/funny-api/login`, {
         email,
         password,
       })
