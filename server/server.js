@@ -43,13 +43,6 @@ app.get('/', (req, res) => {
 
 
 // set up CORS middleware
-const allowedOrigins = ['https://funny-movies-7dsu.vercel.app','https://funny-movies-7dsu.vercel.app/*'];
-
-
-app.use(cors({
-  allowedOrigins
-}));
-
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -57,6 +50,10 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization,Origin, X-Requested-With, Accept');
   next();
 });
+
+app.use(cors({
+  origin: ['https://funny-movies-7dsu.vercel.app', 'https://funny-movies-7dsu.vercel.app/*']
+}));
 
 
 //token access
