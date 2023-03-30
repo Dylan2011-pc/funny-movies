@@ -37,11 +37,12 @@ connection.connect((err) => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
 app.get('/', (req, res) => {
   res.send('api server work!')
 })
 
+
+// set up CORS middleware
 const allowedOrigins = ['https://funny-movies-7dsu.vercel.app'];
 
 const corsOptions = {
@@ -54,8 +55,11 @@ const corsOptions = {
   },
 };
 
+app.use(cors({
+  corsOptions
+}));
 
-// set up CORS middleware
+
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
@@ -63,6 +67,8 @@ app.use((req, res, next) => {
   next();
 });
 
+
+//token access
 const generateAccessToken = (id) => {
   return jwt.sign(id, ACCESS_TOKEN_SECRET, { expiresIn: '30m' });
 };
@@ -200,8 +206,5 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-app.use(cors({
-  corsOptions
-}));
 
 module.exports = app
