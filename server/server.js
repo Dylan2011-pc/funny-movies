@@ -52,7 +52,7 @@ app.use((req, res, next) => {
 });
 
 app.use(cors({
-  origin: ['https://funny-movies-7dsu.vercel.app', 'https://funny-movies-7dsu.vercel.app/*']
+  origin: 'https://funny-movies-7dsu.vercel.app',
 }));
 
 
@@ -63,6 +63,7 @@ const generateAccessToken = (id) => {
 
 // Post method
 app.post(`${FUNNY_MOVIES_KEY}/login`, async (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://funny-movies-7dsu.vercel.app');
   try {
     const { email, password } = req.body;
 
@@ -98,6 +99,7 @@ app.post(`${FUNNY_MOVIES_KEY}/login`, async (req, res) => {
 });
 
 app.post(`${FUNNY_MOVIES_KEY}/register`, async (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://funny-movies-7dsu.vercel.app');
   try {
     const { username, email, password, isAdmin } = req.body;
 
@@ -135,7 +137,7 @@ app.post(`${FUNNY_MOVIES_KEY}/register`, async (req, res) => {
 
 app.post(`${FUNNY_MOVIES_KEY}/video`, async (req, res) => {
   const { url, video_id } = req.body;
-
+  res.setHeader('Access-Control-Allow-Origin', 'https://funny-movies-7dsu.vercel.app');
   try {
       // Check if the video URL already exists in the database
       connection.query('SELECT * FROM video WHERE video_id = ?', [video_id], async (error, results) => {
@@ -162,6 +164,7 @@ app.post(`${FUNNY_MOVIES_KEY}/video`, async (req, res) => {
 
 // Get method
 app.get(`${FUNNY_MOVIES_KEY}/videos`, (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://funny-movies-7dsu.vercel.app');
   const sql = 'SELECT * FROM video';
   connection.query(sql, (error, results) => {
     if (error) {
@@ -173,6 +176,7 @@ app.get(`${FUNNY_MOVIES_KEY}/videos`, (req, res) => {
 });
 
 app.get('/video/:videoId', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://funny-movies-7dsu.vercel.app');
   const videoId = req.params.videoId;
   const apiUrl = `${YOUTUBE_API_KEY}`+`id=${videoId}&key=${GOOGLE_API_KEY}&part=snippet`;
   
