@@ -49,7 +49,7 @@ const Header = observer((props) => {
         HTMLUserAction = 
         <div className='flex gap-12 justify-end items-center h-full'>
             <div  className='text-[20px] flex items-center font-san underline-offset-1 h-full'>
-               <p className='mb-[4px]'> Welcome! {data.userInfo.email}</p>
+               <p className='mb-[4px]'> Welcome! {data.userInfo.username}</p>
             </div>
             <div className='flex gap-10 h-full justify-end items-center'>
                 {
