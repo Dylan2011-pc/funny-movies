@@ -68,11 +68,11 @@ const LoginPage = () => {
               <input
                 type="email"
                 name="email"
-                className="effect-20 placeholder:text-transparent"
+                className="effect-20 placeholder:text-[grey] focus:placeholder:text-transparent"
                 value={email}
                 onChange={handleEmailChange}
                 required
-                placeholder="email"
+                placeholder="Your email"
               />
               <label>Your email</label>
               <span className="focus-border">
@@ -83,11 +83,11 @@ const LoginPage = () => {
               <input
                 type="password"
                 name="password"
-                className="effect-20 placeholder:text-transparent"
+                className="effect-20 placeholder:text-[grey] focus:placeholder:text-transparent"
                 value={password}
                 onChange={handlePasswordChange}
                 required
-                placeholder="csac"
+                placeholder="Password"
               />
               <label>Password</label>
               <span className="focus-border">

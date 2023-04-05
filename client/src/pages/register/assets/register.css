@@ -62,9 +62,6 @@
     border-radius: 4px;
     padding-left: 20px;
 }
-.effect-20::placeholder{
-    color: transparent;
-}
 
 .effect-20:focus {
     border: 1px solid transparent;
@@ -138,9 +135,9 @@
     left: 14px;
     width: fit-content;
     top: 14px;
-    color: #aaa;
+    color: transparent;
     transition: 0.3s;
-    z-index: 0;
+    z-index: -1;
     letter-spacing: 0.5px;
 }
 .effect-20:not(:placeholder-shown)~label,
@@ -151,6 +148,7 @@
     font-size: 14px;
     color: white;
     transition: 0.3s;
+    z-index: 1;
 }
 
 .register-overlay{

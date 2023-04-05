@@ -83,11 +83,11 @@ const RegisterPage = () => {
                 <input
                     type="text"
                     name="username"
-                    className="effect-20"
+                    className="effect-20 placeholder:text-[grey] focus:placeholder:text-transparent"
                     value={formData.username}
                     onChange={handleInputChange}
                     required
-                    placeholder='username'
+                    placeholder='Your username'
                 />
                     <label>Your username</label>
                     <span className="focus-border">
@@ -98,11 +98,11 @@ const RegisterPage = () => {
                     <input
                         type="email"
                         name="email"
-                        className="effect-20"
+                        className="effect-20 placeholder:text-[grey] focus:placeholder:text-transparent"
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        placeholder='email'
+                        placeholder='youremail@funnymovies.com'
                     />
                      <label>youremail@funnymovies.com</label>
                      <span className="focus-border">
@@ -113,12 +113,12 @@ const RegisterPage = () => {
                     <input
                         type="password"
                         name="password"
-                        className="effect-20"
+                        className="effect-20 placeholder:text-[grey] focus:placeholder:text-transparent"
                         autoComplete='true'
                         value={formData.password}
                         onChange={handleInputChange}
                         required
-                        placeholder='password'
+                        placeholder='Your password'
                     />
                     <label>Your password</label>
                         <span className="focus-border">
