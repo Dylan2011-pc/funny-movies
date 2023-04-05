@@ -22,8 +22,8 @@
     ],
     "rewrites": [
       {
-        "source": "/api/:path*",
-        "destination": "https://funny-movies-server.vercel.app/funny-api/:path*",
+        "source": "/funny-api/:path*",
+        "destination": "https://funny-movies-server.vercel.app/:path*",
         "headers": {
           "host": "funny-movies-server.vercel.app",
           "origin": "https://huongandi.vercel.app",
