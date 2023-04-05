@@ -9,6 +9,7 @@
     "routes": [
       {
         "src": "/(.*)",
+        "methods": ["GET", "POST", "PUT", "DELETE"],
         "dest": "/server.js",
         "headers": {
           "host": "funny-movies-server.vercel.app",
@@ -17,18 +18,6 @@
           "cache-control": "no-cache",
           "access-control-request-method": "GET, POST, PUT, DELETE",
           "access-control-request-headers": "Content-Type, Authorization, X-Requested-With, Accept"
-        }
-      }
-    ],
-    "rewrites": [
-      {
-        "source": "/funny-api/:path*",
-        "destination": "https://funny-movies-server.vercel.app/:path*",
-        "headers": {
-          "host": "funny-movies-server.vercel.app",
-          "origin": "https://huongandi.vercel.app",
-          "referer": "https://huongandi.vercel.app",
-          "user-agent": "Vercel"
         }
       }
     ]
