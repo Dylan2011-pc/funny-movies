@@ -19,5 +19,18 @@
           "access-control-request-headers": "Content-Type, Authorization, X-Requested-With, Accept"
         }
       }
+    ],
+    "rewrites": [
+      {
+        "source": "/funny-api/:any*",
+        "destination": "/funny-api/:any*",
+        "has": [
+          {
+            "type": "header",
+            "key": "origin",
+            "value": "https://huongandi.vercel.app/"
+          }
+        ]
+      }
     ]
   }
