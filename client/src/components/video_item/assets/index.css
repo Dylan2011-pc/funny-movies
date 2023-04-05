@@ -5,9 +5,10 @@
 }
 .video-item{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #D0B49F;
 }
 .video-item:hover{
-    box-shadow: rgba(9, 24, 221, 0.35) 0px 10px 20px;
+    box-shadow: rgba(221, 119, 9, 0.35) 0px 10px 20px;
 }
 .line-clamp-3{
     -webkit-line-clamp: 3;

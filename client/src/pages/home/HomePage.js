@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <div className='w-full h-full'>
       <Header></Header>
-      <div className='mt-[100px] px-[48px] pt-[48px]'>
+      <div className='mt-[100px] px-[48px] pt-[48px] bg-[#9DB6CC]'>
         <Videos></Videos>
       </div>
     </div>

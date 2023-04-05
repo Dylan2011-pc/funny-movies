@@ -75,7 +75,7 @@ const Header = observer((props) => {
   }
 
   return (
-    <div className='w-screen fixed z-50 h-[100px] bg-white top-0 shadow-header'>
+    <div className='w-screen fixed z-50 h-[100px] bg-[#BC9476] top-0 shadow-header'>
         <div className='w-full flex justify-between py-3 px-[40px] h-full items-center'>
             <div>
                 <a href="/">

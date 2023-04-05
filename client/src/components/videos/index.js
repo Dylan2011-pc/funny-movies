@@ -17,7 +17,7 @@ const Videos = () => {
   }, []);
 
   return (
-    <div className='grid grid-cols-2 max-[1366px]:grid-cols-1 gap-[32px]'>
+    <div className='grid grid-cols-2 max-[1366px]:grid-cols-1 gap-x-[72px] gap-y-[56px]'>
       {
       video.map((video, index) => (
           <div key={index}>
