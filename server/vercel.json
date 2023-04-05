@@ -22,15 +22,14 @@
     ],
     "rewrites": [
       {
-        "source": "/funny-api/:any*",
-        "destination": "/funny-api/:any*",
-        "has": [
-          {
-            "type": "header",
-            "key": "origin",
-            "value": "https://huongandi.vercel.app/"
-          }
-        ]
+        "source": "/api/:path*",
+        "destination": "https://funny-movies-server.vercel.app/funny-api/:path*",
+        "headers": {
+          "host": "funny-movies-server.vercel.app",
+          "origin": "https://huongandi.vercel.app",
+          "referer": "https://huongandi.vercel.app",
+          "user-agent": "Vercel"
+        }
       }
     ]
   }
