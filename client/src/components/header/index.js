@@ -27,7 +27,7 @@ const Header = observer((props) => {
             </div>
             <div className='flex gap-3.5 h-full justify-end items-center'>
                 <a href="/login">
-                    <p className='user-action-link font-mono text-[blue] font-bold text-[21px] transition-all duration-[250ms] ease-out hover:pb-2'>
+                    <p className='user-action-link font-mono text-[#2f6b9f] font-bold text-[21px] transition-all duration-[250ms] ease-out hover:pb-2'>
                         Login
                     </p>
                 </a>
@@ -36,7 +36,7 @@ const Header = observer((props) => {
                 </p>
                 <a href="/register">
                     <p
-                        className="user-action-link font-mono text-[blue] font-bold text-[21px] transition-all duration-[250ms] ease-out hover:pb-2"
+                        className="user-action-link font-mono text-[#2f6b9f] font-bold text-[21px] transition-all duration-[250ms] ease-out hover:pb-2"
                         type="button"
                     >
                         Register
@@ -55,14 +55,14 @@ const Header = observer((props) => {
                 {
                     !props.isSharing &&
                     <a href="/sharing">
-                        <p style={{wordSpacing: '-8px'}} className='user-action-link font-mono text-[blue] font-bold text-[21px] transition-all duration-[250ms] ease-out hover:pb-2'>
+                        <p style={{wordSpacing: '-8px'}} className='user-action-link font-mono text-[#2f6b9f] font-bold text-[21px] transition-all duration-[250ms] ease-out hover:pb-2'>
                             Share your moment
                         </p>
                     </a>
                 }
                 <a href="/login">
                     <p
-                        className="user-action-link font-mono text-[blue] font-bold text-[21px] transition-all duration-[250ms] ease-out hover:pb-2"
+                        className="user-action-link font-mono text-[#2f6b9f] font-bold text-[21px] transition-all duration-[250ms] ease-out hover:pb-2"
                         type="button"
                     >
                         Logout

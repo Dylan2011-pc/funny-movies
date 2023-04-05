@@ -37,7 +37,7 @@ const VideoItem = (props) => {
           <div className="flex flex-col gap-3 w-[40%]">
             <div>
               <a href={props.videoData.url}>
-                <p className="text-[20px] text-[blue] max-h-[100px] overflow-hidden text-ellipsis line-clamp-3 video-title">
+                <p className="text-[20px] text-[#2f6b9f] max-h-[100px] overflow-hidden text-ellipsis line-clamp-3 video-title">
                   {videoDetail.snippet.title}
                 </p>
               </a>

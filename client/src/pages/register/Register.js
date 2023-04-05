@@ -44,9 +44,9 @@ const RegisterPage = () => {
 
   return (
     <div className='register-page'>
-      <div className='register-introduce-box grid bg-sky-500 p-5'>
+      <div className='register-introduce-box grid bg-[#9DB6CC] p-5'>
         <div className='relative'>
-            <div className="container fixed drop-animation bg-white shadow-xl w-[200px] ml-[30px] mt-[30px] h-[200px] flex justify-center items-center rounded-[50%]">
+            <div className="container fixed drop-animation bg-white shadow-xl w-[200px] ml-[30px] top-[30px] h-[200px] flex justify-center items-center rounded-[50%]">
                 <div className="row">
                     <div className="col-md-12 text-center">
                     <h3 className=" animate-charcter-logo flex flex-col"> 
@@ -65,15 +65,15 @@ const RegisterPage = () => {
                         <p className='text-[#FFD662FF]'>joyful!</p> 
                         <p className='text-[#ed9fb1]'>love</p> 
                         <p className='text-[#50C878]'>passion</p> 
-                        <p className='text-[#ed3957]'>knowledge</p>
+                        <p className='text-[#D0B49F]'>knowledge</p>
                     </span>
                 </div>
             </div>
         </div>
       </div>
-      <div className='register-box'>
+      <div className='register-box bg-[#D0B49F]'>
         <form onSubmit={handleSubmit}>
-            <div className='register-form'>
+            <div className='register-form bg-[#BC9476]'>
                 <div className='register-login-boxtitle mb-4'>
                     <h2>
                         Register box
@@ -126,7 +126,11 @@ const RegisterPage = () => {
                         </span>
                 </div>
                 <div className='flex justify-center items-center flex-col gap-3'>
-                    <button type="submit">Register</button>
+                    <button type="submit" 
+                        className="bg-[#2f6b9f] text-white hover:bg-[#1170c4] w-6/12 rounded-md outline-none p-3 disabled:text-gray-400 disabled:bg-[#1170c4] max-w-[200px]"
+                    >
+                        Register
+                        </button>
                     <p>
                         Already have an account?  <a href="/login" className='underline text-[blue]'>Login here!</a>
                     </p>

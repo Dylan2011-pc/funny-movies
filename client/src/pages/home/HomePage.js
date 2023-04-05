@@ -7,7 +7,7 @@ import Videos from "../../components/videos/index";
 const HomePage = () => {
 
   return (
-    <div className='w-full h-full'>
+    <div className='w-full h-full bg-[#9DB6CC]'>
       <Header></Header>
       <div className='mt-[100px] px-[48px] pt-[48px] bg-[#9DB6CC]'>
         <Videos></Videos>

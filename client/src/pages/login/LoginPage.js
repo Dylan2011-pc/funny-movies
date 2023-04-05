@@ -55,12 +55,12 @@ const LoginPage = () => {
 
   return (
     <div className="flex w-screen h-screen">
-      <div className="w-[60%] px-[30px] h-full flex justify-center items-center">
+      <div className="w-[60%] px-[30px] h-full flex justify-center items-center bg-[#D0B49F]">
         <form
           onSubmit={handleSubmit}
-          className="w-[80%]  min-[1024px]:max-w-[700px]"
+          className="w-[80%]  min-[1024px]:max-w-[700px] "
         >
-          <div className="login-form flex flex-col gap-[36px] justify-center items-center">
+          <div className="login-form flex flex-col gap-[36px] justify-center bg-[#BC9476] items-center">
             <div className="register-login-boxtitle mb-4">
               <h2>Login box</h2>
             </div>
@@ -98,7 +98,7 @@ const LoginPage = () => {
               {errorMessage && <p className='text-[red]'>{errorMessage}</p>}
               {LoginMessage && <p className='text-[green]'>{LoginMessage}</p>}
               <button
-                className="bg-[blue] hover:bg-[darkblue] rounded-[8px] outline-none border-none p-[12px] text-white w-full max-w-[200px]"
+                className="bg-[#2f6b9f] text-white hover:bg-[#1170c4] w-6/12 rounded-md outline-none p-3 disabled:text-gray-400 disabled:bg-[#1170c4] max-w-[200px]"
                 type="submit"
               >
                 Login
@@ -113,7 +113,7 @@ const LoginPage = () => {
           </div>
         </form>
       </div>
-      <div className="w-[40%] bg-sky-500 h-full p-5 grid justify-center items-center">
+      <div className="w-[40%] bg-[#9DB6CC] h-full p-5 grid justify-center items-center">
         <div className="relative">
           <div className="container fixed drop-animation top-[calc(30px+1.25rem)] right-0 bg-white shadow-xl w-[200px] mr-[calc(30px+1.25rem)] h-[200px] flex justify-center items-center rounded-[50%]">
             <div className="row">
@@ -136,7 +136,7 @@ const LoginPage = () => {
             <span></span>
             <div className="message text-center">
               <div className="word1 text-[#F2921D]">joyful</div>
-              <div className="word2 text-[#ed3957]">knowledge</div>
+              <div className="word2 text-[#25712c]">knowledge</div>
               <div className="word3 text-[#ed9fb1]">love</div>
             </div>
           </div>

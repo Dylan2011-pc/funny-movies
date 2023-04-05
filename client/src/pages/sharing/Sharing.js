@@ -69,31 +69,31 @@ const SharingPage = observer(() => {
   }
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full bg-[#D0B49F]">
       <Header isSharing></Header>
       <div className="w-full h-full flex justify-center items-center">
         <form onSubmit={handleSubmit}>
-          <div className="w-[500px] h-[300px] flex flex-col rounded-lg bg-white shadow-box-sharing py-[32px] px-[20px] justify-between">
+          <div className="w-[500px] h-[300px] flex flex-col rounded-lg bg-[#9DB6CC] shadow-box-sharing py-[32px] px-[20px] justify-between">
             <div>
-              <p className="user-action-link font-mono text-[blue] font-bold text-[21px]">
+              <p className="user-action-link font-mono text-white font-bold text-[21px]">
                 Sharing a youtube video
               </p>
             </div>
             <div className="w-full flex flex-col gap-y-3">
-              <p className="text-[16px] font-mono">Your youtube video URL:</p>
+              <p className="text-[16px] text-white font-mono">Your youtube video URL:</p>
               <input
                 name="videoTitle"
                 required
                 type="text"
                 onChange={handleChange}
-                className="w-full outline-none rounded h-[40px] pl-3 border border-solid border-black focus:border-[blue] hover:border-[blue]"
+                className="w-full outline-none rounded h-[40px] pl-3 border border-solid border-[#BC9476] focus:border-[#BC9476] hover:border-[#BC9476]"
               />
             </div>
             <div className="w-full flex justify-center">
               <button
                 type={"submit"}
                 disabled={isLinkValid ? false : true}
-                className="bg-[blue] text-white hover:bg-[darkblue] w-6/12 rounded-md outline-none p-3 disabled:text-gray-400 disabled:bg-gray-700"
+                className="bg-[#2f6b9f] text-white hover:bg-[#1170c4] w-6/12 rounded-md outline-none p-3 disabled:text-gray-400 disabled:bg-[#1170c4]"
               >
                 Share
               </button>
