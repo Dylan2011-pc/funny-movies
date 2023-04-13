@@ -7,7 +7,7 @@ function App() {
 
   return (
     <RootStoreProvider>
-      <div className="w-screen h-screen">
+      <div className="w-full h-screen">
         <BrowserRouter>
           <Routes>
             {routes.map((route, index) => {
